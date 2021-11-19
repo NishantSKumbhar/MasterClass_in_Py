@@ -18,7 +18,7 @@ class Month:
 
 def get_month_dict(start_day: str, no_of_day: int) -> dict:
     days = []
-    print(start_day)
+    print("Start day of month : ", start_day)
     week_days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     # print(days)
     flag = 0
@@ -27,7 +27,7 @@ def get_month_dict(start_day: str, no_of_day: int) -> dict:
             flag = k
             break
 
-    print("flag : ", flag)
+    # print("flag : ", flag)
     for i in range(1, no_of_day + 1):
         days.append(i)
     # print(days)
@@ -65,13 +65,14 @@ week_day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 if
 """
 mon = get_month_dict(week_day[3], 31)
-print(mon)
-
+print("Your Month : ", mon)
 jan = Month(mon)
 k = jan.get_day(31)
-print(k)
+print("Day you Want : ", k)
 # days_dict[1] = 'Sunday'
+# ----------------------------------------------
 nov_month = get_month_dict(week_day[1], 30)
+print("Your Month : ", nov_month)
 nov = Month(nov_month)
 today = nov.get_day(19)
-print(today)
+print("Day you Want : ", today)
