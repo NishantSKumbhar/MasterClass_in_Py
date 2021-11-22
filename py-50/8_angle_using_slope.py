@@ -69,7 +69,7 @@ class Equation:
 
         # print(self.a, self.b, self.c)
 
-    def get_angle(self, other_a2):
+    def get_angle(self, other_a2) -> float:
         """
         this is class method used to get angle between two lines using line equations
         :param other_a2: second line object
@@ -117,7 +117,7 @@ class Equation:
         print(tan_theta)
         degrees = tan_theta * 57.2958
         print("Final angle between lines is : ", degrees)
-
+        return degrees
 
     def show(self):
         print("a : ", self.a)
@@ -134,6 +134,9 @@ print(type(e2))
 print(e1.__dict__)
 print(e2.__dict__)
 final = e1.get_angle(e2)
+print(final)
+print(type(final))
+# hence there is no need to always create object of class while passing or using this -> obj1.fun(obj2)
 #final = e1.get_angle(e2)
 
 """a1, b1, c1 = float(input("Enter the value of a1 of the First Equation : ")), float(input("Enter the value of b1 of the Second Equation : ")), float(input("Enter the value of c1 of the Second Equation : "))
